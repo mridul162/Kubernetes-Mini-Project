@@ -32,5 +32,29 @@
    >> docekr images
    >> minikube image load kubernetes-test-app:v1.1
 
+   >> kubectl apply -f deployment.yaml (from project directory)
+   >> kubectl delete deployment kubernetes-test-app (conditional)
+
+   >> kubectl get pods -A
+   >> kubectl get nodes -A
+
+   >> kubectl delete pod <pod-name/id>
+   >> minikube service kubernetes-test-app
+   >> minikube dashboard
+
+   >> kubectl get endpoints
+   >> kubectlget service
+
+   ** Load Balancing **
+   >> kubectl get pods
+   >> kubectl logs -f <pod-id>
+   Postman -> Collection -> Runs -> Performance -> Run Performance Test -> Performance -> (Fixed -> 10Users -> 1min)
+
+   >> minikube stop
+
+   for status: ImagePullBackoff issue
+   >> docker tag kubernetes-test-app:v1.1 mridul162/kubernetes-test-app:v1.1
+   >> docker push mridul162/kubernetes-test-app:v1.1
+
 
 ----------------------------------------------------------
