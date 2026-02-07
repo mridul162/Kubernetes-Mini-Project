@@ -1,0 +1,36 @@
+1. Build the app(any) and test in local
+2. Start dockerhub and docker desktop (sign in to both)
+3. Prepare the dockerfile in the project
+
+4. Create Docker image and test it:
+   >> docker build -t kubernetes-testoapp:latest .
+   >> docker image
+   >> docker run -p 5000:5000 kubernetes-test-app:latest
+
+5. Create deployment.yaml
+
+6. Install Minikube
+   >> Go to: https://minikube.sigs.k8s.io/docs/start/?arch=%2Fwindows%2Fx86-64%2Fstable%2F.exe+download
+
+   >> minikube start / minikube start --embed-certs
+   >> minikube status:
+      >> output:
+               minikube
+               type: Control Plane
+               host: Running
+               kubelet: Running
+               apiserver: Running
+               kubeconfig: Configured
+
+   >> kubectl get all -A
+   >> kubectl get pods -A
+   >> kubectl get nodes -A
+
+   >> how to add new node? - minikube start --node-2 / minikube start --node-2 --embed-certs
+
+   >> minikube image list
+   >> docekr images
+   >> minikube image load kubernetes-test-app:v1.1
+
+
+----------------------------------------------------------
